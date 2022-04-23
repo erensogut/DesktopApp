@@ -1,0 +1,10 @@
+
+bin/Debug/net6.0/appsettings.json
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
+.vs/DesktopApp/xs/project-cache/DesktopApp-Debug.json
+.vs/DesktopApp/xs/UserPrefs.xml
