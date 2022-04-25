@@ -28,8 +28,8 @@ namespace DesktopApp
 			var endpoint = url+"/Auth/login";
 
 			var response = await client.PostAsync(endpoint, data);
-			var result = await response.Content.ReadAsStringAsync();
-			var loginResponse = JsonSerializer.Deserialize<LoginResponse>(result);
+			//var result = await response.Content.ReadAsStringAsync();
+			var loginResponse = await JsonSerializer.DeserializeAsync<LoginResponse>(response.Content.ReadAsStream());
 			return loginResponse.token;
 		}
 		public async Task<bool> IsNewExist()
